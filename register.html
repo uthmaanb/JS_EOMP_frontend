@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <nav>
+      <ul>
+          <li><a href="./index.html">home</a></li>
+          <li><a href="./register.html">register</a></li>
+          <li><a href="./veiwprod.html">guns</a></li>
+      </ul>
+    </nav>
+    <div class="register">
+      <form
+      action="https://murmuring-everglades-76424.herokuapp.com/user-registration/"
+      method="POST"
+      id="form"
+    >
+      <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" />
+      </div>
+      <div>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" />
+      </div>
+      <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" />
+      </div>
+      <div>
+        <button type="submit">Submit Information</button>
+      </div>
+    </form>
+      </div>
+    <script src="./Scripts/register.js"></script>
+</body>
+</html>
