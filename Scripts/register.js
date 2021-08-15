@@ -4,9 +4,9 @@ fetch('https://murmuring-everglades-76424.herokuapp.com/show-users/')
   .then((json) => console.log(json));
 
 
-const form = document.querySelector(".form")
-function submitForm(event){
-  event.preventDefault()
-  window.location.href = "./veiwprod.html"
-}
-form.addEventListener("submit", submitForm)
+// const form = document.querySelector(".form")
+// function submitForm(event){
+//   event.preventDefault()
+//   window.location.href = "./veiwprod.html"
+// }
+// form.addEventListener("submit", submitForm)
