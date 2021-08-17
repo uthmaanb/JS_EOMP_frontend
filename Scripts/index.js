@@ -27,7 +27,7 @@ function login(url) {
 			}
 			else {
 				myStorage = window.localStorage
-				window.location.href = './viewprod.html'
+				window.location.href = 'viewprod.html'
 			}
 		});
 }
