@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prod_register</title>
+</head>
+<body>
+    <nav>
+      <ul>
+          <li><a href="./index.html">home</a></li>
+          <li><a href="./register.html">register</a></li>
+          <li><a href="./veiwprod.html">guns</a></li>
+      </ul>
+    </nav>
+    <div class="register">
+      <form
+      action="https://murmuring-everglades-76424.herokuapp.com/prod-registration/"
+      method="POST"
+      id="form"
+    >
+      <div>
+        <label for="name">name</label>
+        <input required type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input required type="text" name="price" id="price" />
+      </div>
+      <div>
+        <label for="description">description</label>
+        <input required type="text" name="description" id="description" />
+      </div>
+      <div>
+        <label for="prod_type">Product type</label>
+        <input required type="text" name="prod_type" id="prod_type" />
+      </div>
+      <div>
+        <label for="quantity">Quantity</label>
+        <input required type="text" name="quantity" id="quantity" />
+      </div>
+      <div>
+        <button type="submit">Submit Information</button>
+      </div>
+    </form>
+      </div>
+    <script src="./Scripts/add_prod.js"></script>
+</body>
+</html>
