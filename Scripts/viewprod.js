@@ -27,7 +27,9 @@ function renderproducts(products) {
         <h3 class="product-discription">${products[2]}</h3>
         <h3 class="product-price">${products[3]}</h3>
         <h3 class="quantity">${products[5]}</h3>
-        <button onclick="deleteProduct(${product[0]})">delete</button>    
+        <button onclick="deleteProduct(${products[0]})">delete</button>
+        <button onclick="toCart(${products[0]})">Cart</button>
+        <button onclick="add()">add</button>
 
       </div>
     `;
