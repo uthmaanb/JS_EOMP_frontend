@@ -14,9 +14,29 @@
         <ul>
             <li><a href="./index.html">home</a></li>
             <li><a href="./add_prod.html">add product</a></li>
+            <button onclick="toggleModal('cart')">view cart</button>
         </ul>
     </nav>
+
       <div id="products-container"></div>
+
+      <div id="plate-modal" class="modal">
+        <div class="modal_plate">
+          <button onclick="toggleModal('plate-modal')" class="modalbtn">
+            X
+          </button>
+        </div>
+        </div>
+
+      <div id="cart" class="modal">
+        <div class="cart-modal">
+          <button onclick="toggleModal('cart')" class="modalbtn">
+            X
+          </button>
+          <div class="cart_items"></div>
+        </div>
+        </div>
+
     <script src="./Scripts/viewprod.js"></script>
 </body>
 </html>

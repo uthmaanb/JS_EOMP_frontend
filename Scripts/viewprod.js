@@ -3,15 +3,18 @@
 // .then((response) => response.json())
 // .then((data) => console.log(data));
 
+let products = [];
+let cart = [];
+console.log(cart);
 
 fetch("https://murmuring-everglades-76424.herokuapp.com/show-products/")
   .then((response) => response.json())
   .then((json) => {
-    console.log(json.data);
-    json.data.forEach((item) => {
-      console.log(item);
-      console.log(item[1]);
-    });
+    // console.log(json.data);
+    // json.data.forEach((item) => {
+    //   console.log(item);
+    //   console.log(item[1]);
+    // });
     renderproducts(json.data);
   });
 
@@ -29,7 +32,7 @@ function renderproducts(products) {
         <h3 class="quantity">${products[5]}</h3>
         <button onclick="deleteProduct(${products[0]})">delete</button>
         <button onclick="toCart(${products[0]})">Cart</button>
-        <button onclick="add()">add</button>
+        <button onclick="toggleModal('plate-modal')">edit</button>
 
       </div>
     `;
@@ -44,3 +47,23 @@ function deleteProduct(index) {
   }
 }
 
+function toCart(id) {
+  console.log(id);
+  let product = [];
+  fetch("https://murmuring-everglades-76424.herokuapp.com/show-products/")
+    .then((response) => response.json())
+    .then((json) => {
+      json.data.forEach((item) => {
+        if (item[0] == id) {
+          product = item;
+        }
+      });
+      console.log(product[1]);
+	    cart.push(product[1]);
+	    console.log("Here is your items:", cart);
+    });
+}
+
+function toggleModal(modalID) {
+  document.getElementById(modalID).classList.toggle("active");
+  }
